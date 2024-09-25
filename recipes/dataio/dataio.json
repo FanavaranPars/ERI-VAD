@@ -1,0 +1,44 @@
+{
+    "dataset":
+    {
+        "name": "pathes",
+        "base_data_pth" : "/home/eri4090/Documents/VAD/DATASET",
+        "base_lbl_pth" : "/home/eri4090/Documents/VAD/DATASET/vad_labels",
+        "clean_file" : "clean_dataset",
+        "noise_file": "Noise_dataset", 
+        "reverb_file": "Noise_dataset/RIRS_NOISES",
+        "eval_file": "evaluation/validation",
+        "test_file": "evaluation/test",
+        "clean_groups": ["CommonVoice", "TinyTIMIT"],
+        "clean_scalse" : [1,100],
+        "noise_groups": ["QUT" , "pointsource_noises", "musan_noise", "Audioset"],
+        "noise_scalse" :  [3,20,50,1] ,
+        "rirs_groups": ["simulated_rirs", "real_iris"],
+        "rirs_scalse" : [1,50],
+        "Test_snr_list" : [-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 14, 18, 22, 26, 30]
+    },
+    "train":
+    {
+        "name": "train",
+        "SAMPLE_RATE" : 16000,
+        "MAX_LENGTH" : 160000,
+        "MAX_NOISE_N" : 2, 
+        "T_REVERB" : 0.2, 
+        "MIN_SNR" : -14,
+        "POSTPROCESSING" : false,
+        "SENS_MS": 100,
+        "BATCH_SIZE" : 256,
+        "NUM_WORKER": 10, 
+        "PIN_MEMORY": true,
+        "TRAINING": true
+    },
+    "evaluation":
+    {
+        "name": "evaluation",
+        "SAMPLE_RATE" : 16000,
+        "BATCH_SIZE" : 256,
+        "NUM_WORKER": 10, 
+        "PIN_MEMORY": true
+    }
+}
+

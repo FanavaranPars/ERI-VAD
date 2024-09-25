@@ -1,0 +1,13 @@
+{
+	"name": "Pyannote",
+	"sincnet_filters": [80,60,60],
+	"sincnet_stride": 10,
+	"sequence_type": "lstm",
+	"sequence_nlayers": 4,
+	"sequence_neuron": 128,
+	"sequence_drop_out": 0.1,
+	"sequence_bidirectional": true,
+	"linear_blocks": [128,128,1],
+	"param_save_path": "./checkpoints/Pyannote.pth",
+	"loss_save_path": "./train_result/Pyannote_FT.txt"
+}
