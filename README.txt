@@ -3,6 +3,10 @@ README of VAD project.
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 For inference use bellow code in your terminal:
 
+## Checkpoints
+Download the checkpoints [here](https://huggingface.co/FanavaranPars/ERI-VAD).
+
+
 python inference.py --waves_file_paths "BASE_PATH_OF_audio_files"
 The results will be in outputs file.
 
